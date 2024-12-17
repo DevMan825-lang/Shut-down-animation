@@ -1,0 +1,72 @@
+body {
+    font-size: 15pt;
+}
+*{
+  margin:0;
+  padding:0; 
+  box-sizing:border-box;
+}
+.container{
+  width:100vw; 
+  height:100vh; 
+  background-color:black;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  animation:animates 3s linear;
+  animation-delay:2s;
+}
+@keyframes animates{
+  0%{
+    background-color:white;
+  }
+  50%{
+    background-color:#7facf0;
+  }
+  100%{
+    background-color:#7facf0;
+  }
+}
+.loader-1{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  border-top:20px dotted #fff; 
+  border-radius:50%;
+  visibility:hidden;
+  animation:animate 2s linear;
+  animation-delay:2s;
+}
+@keyframes animate{
+  0%{
+    transform:rotate(0deg);
+    visibility: visible;
+  }
+  100%{
+    transform:rotate(720deg); 
+    visibility: visible;
+  }
+}
+h1{
+  margin-top:100px;
+  font-size:80px;
+  color:hsl(0, 0%, 94%);
+  text-shadow: 0px 0px 20px(56,79,79);
+  font-family:arial;
+  font-weight: 900;
+  visibility:hidden;
+}
+h1::before{
+  content:"Shut down...";
+  animation:animations 3s linear;
+  animation-delay:2s;
+}
+@keyframes animations{
+from{
+    visibility:hidden;
+  }
+  to{
+    visibility:visible;
+  }
+}
